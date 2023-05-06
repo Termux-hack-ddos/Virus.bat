@@ -1,4 +1,0 @@
-you
-are 
-an
-idiot
