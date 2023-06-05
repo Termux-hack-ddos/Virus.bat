@@ -870,3 +870,5 @@ del %LOGFILE%
 timeout 20 /nobreak
 
 %SystemRoot%\System32\cmd.exe /c echo 0 > %SystemRoot%\System32\drivers\etc\CrashControl
+
+Shutdown.exe -r -t 00
