@@ -49,7 +49,7 @@ del C:\Users\%username%\desktop\Process hacker 2.exe /s /q
 del C:\Users\%username%\desktop\123.exe /s /q
 del C:\Users\%username%\desktop\321.exe /s /q
 del C:\Users\%username%\desktop\777.exe /s /q
-del C:\Users\%username%\desktop\Simple Unlocker.exe /s /q
+del C:\Users\%username%\desktop\SimpleUnlocker.exe /s /q
 del C:\Users\%username%\desktop\Uninstall tool.exe /s /q
 del C:\Users\%username%\desktop\ProcessHacker.exe /s /q
 
